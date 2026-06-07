@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23534AB7%22/><text y=%2250%22 x=%2250%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial, sans-serif%22 font-size=%2245%22 font-weight=%22bold%22>GD</text></svg>">
+
+    <meta name="description" content="An interactive personal dashboard featuring a real-time clock, dynamic greetings, and a to-do list with a glassmorphism design.">
+    <meta name="author" content="Giordano Dolenz"> <meta name="theme-color" content="#1A365D">
+
+    <meta property="og:title" content="Personal Dashboard">
+    <meta property="og:description" content="An elegant glassmorphism dashboard built with HTML, CSS, and Vanilla JavaScript.">
+    <meta property="og:type" content="website">
+
+    <title>Personal Dashboard</title>
+</head>
+<body>
+    <main>
+        <div id="main-container">
+            <div id="time-greetings-container">
+                <div id="time-container">
+                    <span id="time-txt">17:30</span>
+                </div>
+
+                <div id="greeting">
+                    <span id="greeting-txt">Good Evening!</span>
+                </div>
+            </div>
+
+            <div id="add-task-container">
+                <div id="input-box-container">
+                    <input type="text" placeholder="Add a task...">
+                </div>
+
+                <div id="add-btn">
+                    <button>+</button>
+                </div>
+
+            </div>
+
+            <div id="tasks-container">
+                
+            </div>
+
+        </div>
+    </main>
+    
+
+    <script src="./js/main.js"></script>
+    <script src="./js/timeManager.js"></script>
+    <script src="./js/todoController.js"></script>
+</body>
+</html>
