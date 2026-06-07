@@ -1,45 +1,71 @@
-Personal Dashboard 🌅
+# Personal Dashboard
 
-An interactive personal dashboard for the browser, designed with an elegant glassmorphism interface inspired by the warm colors of a coastal sunset.
-✨ Features
+A minimal, elegant personal dashboard built with Vanilla JavaScript, HTML, and CSS — featuring a live clock, dynamic time-based greetings, and a persistent to-do list with a glassmorphism aesthetic.
 
-    Real-Time Clock: Displays the exact time updated instantly, accompanied by a dynamic greeting that changes based on the time of day (morning, afternoon, evening).
+🔗 **Live Demo:** [giordano0.github.io/Personal-Dashboard](https://giordano0.github.io/Personal-Dashboard/)
 
-    Interactive To-Do List: Add new tasks, cross them off when completed, or delete them from the list. Features a smooth, clean scroll area for long lists.
+---
 
-    Persistent Data Storage: Utilizes the browser's localStorage. Closing the tab or reloading the page will not result in lost tasks.
+## Features
 
-    Glassmorphism Design & Custom UI: A container with a frosted glass effect and a minimalist custom scrollbar (without a visible background track) for a premium visual experience.
+- **Live Clock** — updates every second, always showing the current time
+- **Dynamic Greetings** — automatically switches between Good Morning, Good Afternoon, and Good Evening based on the hour
+- **To-Do List** — add, complete, and delete tasks with a clean interface
+- **Persistent Storage** — tasks are saved to `localStorage` and survive page refreshes
+- **Glassmorphism Design** — frosted-glass card over a vivid gradient background
+- **Responsive Layout** — adapts gracefully to mobile screens
 
-🛠️ Technologies Used
+---
 
-    HTML5: Page structure.
+## Tech Stack
 
-    CSS3: Flexbox, CSS variables, gradients, backdrop-filter for the glass effect, and pseudo-elements for advanced scrollbar styling.
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (custom properties, flexbox, backdrop-filter) |
+| Logic | Vanilla JavaScript (ES6+) |
+| Fonts | Google Fonts — Poppins |
+| Storage | Web Storage API (`localStorage`) |
 
-    Vanilla JavaScript: Separate modules for logic, DOM manipulation, time management, and the Web Storage API, all built without external frameworks or libraries.
+---
 
-📂 Project Architecture
+## Project Structure
 
-The code is organized in a modular way to ensure tidiness and scalability:
-Plaintext
-
-/
+```
+Personal-Dashboard/
 ├── index.html
 ├── css/
-│   ├── style.css             # Main styles, variables, glass effect, and scrollbar
-│   └── animations.css        # Reserved for future animations
+│   ├── style.css         # Layout, glassmorphism card, component styles
+│   └── animations.css    # Animation definitions
 └── js/
-    ├── main.js               # Main coordinator (Entry point)
-    ├── timeManager.js        # Clock and dynamic greeting engine
-    └── todoController.js     # Task addition, rendering, and storage logic
+    ├── main.js           # Entry point — initializes all modules on DOMContentLoaded
+    ├── timeManager.js    # Clock and greeting logic
+    └── todoController.js # Task CRUD, rendering, and localStorage persistence
+```
 
-🚀 How to Run the Project
+---
 
-This project is entirely static and does not require any complex development environment, local server, or Node.js.
+## How It Works
 
-    Download or clone the files to your computer.
+**Time & Greetings (`timeManager.js`)**  
+`initTimeManager()` runs `updateTime()` immediately, then schedules it with `setInterval` every 1000ms. The greeting updates alongside the clock based on hour ranges (5–11 → Morning, 12–17 → Afternoon, 18+ → Evening).
 
-    Ensure the folder structure matches the tree shown above.
+**To-Do Controller (`todoController.js`)**  
+Tasks are stored as an array of objects `{ id, text, completed }`. Every mutation (add, toggle, delete) calls `saveTasks()` followed by `renderTasks()`, which rebuilds the task list from the current array state. IDs use `Date.now()` for uniqueness.
 
-    Double-click the index.html file to open it in any modern web browser (Chrome, Safari, Firefox, Edge).
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/Giordano0/Personal-Dashboard.git
+cd Personal-Dashboard
+```
+
+Then open `index.html` in your browser — no build step or dependencies required.
+
+---
+
+## Author
+
+**Giordano Dolenz** — [github.com/Giordano0](https://github.com/Giordano0)
