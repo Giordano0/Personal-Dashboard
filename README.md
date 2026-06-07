@@ -1,5 +1,10 @@
-# Personal Dashboard
+<h1 align="center">
+    Personal Dashboard
+</h1>
 
+<p align="center">
+    <img width="250" height="300" alt="PersonalDashboardPreview" src="https://github.com/user-attachments/assets/4999b7cc-01a7-4732-8599-1905904cec1b" />
+</p>
 A minimal, elegant personal dashboard built with Vanilla JavaScript, HTML, and CSS — featuring a live clock, dynamic time-based greetings, and a persistent to-do list with a glassmorphism aesthetic.
 
 🔗 **Live Demo:** [giordano0.github.io/Personal-Dashboard](https://giordano0.github.io/Personal-Dashboard/)
